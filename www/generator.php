@@ -9,6 +9,7 @@
 	define("MEAT_ID", $ini_array['square']['meat']);
 	define("EXTRAS_ID", $ini_array['square']['extras']);
 	define('MORE_GRUB', $ini_array['square']['moregrub']);
+	define('SQUARE_TOKEN', $ini_array['square']['token']);
 
 	
 
@@ -40,7 +41,7 @@
 		));
 
 		$headers = array(
-		    'Authorization: bearer 8JAKg4C8T7QR0unu4_E6Qg',
+		    'Authorization: bearer '. SQUARE_TOKEN,
 		);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 		$result = curl_exec($ch);
