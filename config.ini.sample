@@ -1,0 +1,23 @@
+[mysql]
+host = localhost
+user = <username>
+pass = <password>
+database = <database>
+
+[square]
+token = <token>
+sandwich ="74ED7707-0A2D-4158-8560-62EC45FF7156"
+meat = "622129c6-8937-412d-a187-e3a8ba00f550"
+extras = "0EC79063-BF21-4856-9A97-8E84675A2E82"
+sauce = "b6137362-7b1e-4e3c-bd6c-8821e219147e"
+bread = "92d2e88a-0b58-4dd5-b5b3-9efd4ce5fcc0"
+cheese = "3a02ad17-cb1d-4113-861a-90f69d147227"
+moregrub = "454449fb-243c-42ab-a8e7-a9bd6e636ed7"
+
+[pushover]
+user = <username>
+token = <token>
+
+[gmail]
+user = <username>
+pass = <password>
