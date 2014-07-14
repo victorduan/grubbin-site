@@ -239,8 +239,20 @@
 				$.post( "process.php", 
 						data,
 						function(output) {
-							$("#php-order").html(output);
-							console.log(output);
+							var JSON = $.parseJSON(output);
+							if(JSON['status'] == "success") {
+								$("#php-order").html(JSON['message']);
+
+								// "Clear" the cart
+								htmlString = "View Pick-up Order ";
+								$('#update-order').html(htmlString);
+							}
+							else {
+								$("#php-order").html("Hmm, looks like something went wrong with your order. Please try it again. <br>");
+								//location.reload();
+							}
+							
+							console.log(JSON);
 						});
 
 		  	})

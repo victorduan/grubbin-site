@@ -205,11 +205,18 @@
 			else {
 				$r = SendOrder($_POST['contact-name'], $_POST['email'], $_POST['phone']);
 
-				echo "We've received your order! <br>";
-				echo "What's next? Look for a order confirmation email from us before picking up!<br><br>";
-				echo "If you have any questions, please call us at (415) 688-7116<br><br><br>";
-				echo "Your order number for reference: <b>".$r."</b>";
+				$message = "We've received your order! <br>";
+				$message .= "What's next? Look for a order confirmation email from us before picking up!<br><br>";
+				$message .= "If you have any questions, please call us at (415) 688-7116<br><br><br>";
+				$message .= "Your order number for reference: <b>".$r."</b>";
 				ResetCart();
+
+				$output = array(
+					"status" => 'success',
+					"message" => $message
+				);
+
+				echo json_encode($output);
 
 			}
 
@@ -352,7 +359,7 @@
 
 			// Send the email
 			$subject = "Grubbin' Order #".$orderId." : We Received Your Order!";
-			echo $gmail->SendGmail($email, $subject, $text, $html);
+			$gmail->SendGmail($email, $subject, $text, $html);
 		}
 
 		if ($sendPushover == True) {
