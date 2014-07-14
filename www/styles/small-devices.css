@@ -1,0 +1,101 @@
+<style>
+	body{ font-family: 'Open Sans', sans-serif; font-size: 100%; }
+	h3 { font-family: 'Open Sans', sans-serif; font-size: 1.2em; background-color: #cccccc; border: 1px solid black; padding: 10px; margin: 10px; }
+
+	.sandwich-desc { display:none; }
+	.sandwich-name { font-family: 'Open Sans', sans-serif; font-size: 1em; }
+	.sandwich-xtra { font-family: 'Open Sans', sans-serif; font-size: 1em; }
+	.main-categories { padding-left: 1em; padding-right: 0.25em; }
+	.white-popup {
+			position: relative;
+			background: #FFF;
+			padding: 20px;
+			width: 80%;
+			max-width: 100%;
+			margin: 20px auto;
+		}
+
+	.hidden-breaks {
+		display: block;
+	}
+
+	#innerDiv {
+		    width: 95%;
+		    margin: 0;
+		}
+
+	#submitOrderForm input {
+			font-size: 2em;
+			padding: 5px;
+		}
+
+	#submitOrderForm label {
+			margin-right: 10px;
+		}
+
+	#brown_bag {
+		width: 50px;
+		height: 50px;
+		padding: 10px;
+	}
+
+	#update-order {
+		font-size: 0.75em;
+	}
+
+	textarea {
+		width: 100%;
+	}
+
+	label {
+		font-size: 1em;
+	}
+
+	span {
+		font-size: 1em;
+	}
+
+	button{
+	 -webkit-appearance: none; -moz-appearance: none;
+	 display: block;
+	 margin: 0.5em 0;
+	 font-size: 1em; line-height: 2.5em;
+	 color: #333;
+	 font-weight: bold;
+	 height: 4em; width: 100%;
+	 background: #fdfdfd; background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe)); background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+	 border: 1px solid #bbb;
+	 -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
+	}
+
+	input[type=text], input[type=url], input[type=email], input[type=password], input[type=tel] {
+	  -webkit-appearance: none; -moz-appearance: none;
+	  display: block;
+	  margin: 0;
+	  width: 100%; height: 45px;
+	  line-height: 45px; font-size: 17px;
+	  border: 1px solid #bbb;
+	}
+
+	input[type=checkbox], input[type=radio] {
+	 width: 1em; height: 1em;
+	 -webkit-border-radius: 22px; -moz-border-radius: 22px; border-radius: 22px;
+	 border: 1px solid #bbb;
+	}
+
+	#submitOrderForm label{
+	    display: inline-block;
+	    float: left;
+	    clear: left;
+	    width: 3em;
+	    text-align: right;
+	    padding: 8px;
+	}
+	#submitOrderForm input {
+		display: inline-block;
+		float: left;
+		font-size: 12px;
+		padding: 8px;
+		width: 11em;
+	}
+</style>
