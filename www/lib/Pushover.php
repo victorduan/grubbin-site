@@ -32,15 +32,28 @@
 			return $message;
 		}
 
-		public function PushToPushover($message) {
+		public function PushToPushover($message, $orderNum, $details) {
+			/* 
+				$details - an array with customer details
+
+				$details = array(
+					"name" => name,
+					"phone" => phone,
+					"email" => email
+				);
+			*/ 
+
 			curl_setopt_array($ch = curl_init(), array(
 			CURLOPT_URL => "https://api.pushover.net/1/messages.json",
+			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_POSTFIELDS => array(
 			  "token" => $this->_app_token,
 			  "user" => $this->_user_key,
 			  "message" => $message,
+			  "title" => "New Order #".$orderNum." for ".$details['name']
 			)));
-			curl_exec($ch);
+			
+			$result = curl_exec($ch);
 			curl_close($ch);
 		}
 	}

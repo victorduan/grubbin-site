@@ -366,7 +366,13 @@
 			$pushover = new Pushover(APP_TOKEN, USER_KEY);
 			$message = Pushover::ProcessOrderForPushover($_SESSION['cart']);
 
-			PushToPushover($message);
+			$customerDetails = array(
+					"name" => $name,
+					"phone" => $phone,
+					"email" => $email
+				);
+
+			$pushover->PushToPushover($message,$orderId, $customerDetails);
 		}
 
 		return $orderId;
